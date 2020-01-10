@@ -1,0 +1,121 @@
+
+    /*-----
+    COLORS
+    NAVBAR #333
+    CAROUSEL BACKGROUND #101010
+  background-color: #878787
+  GREEN #74b443
+  ORANGE #f1592a
+  GREY #6d6e71
+
+    */
+
+#nav_picture{
+  width: 45px;
+  height: 45px;
+}
+
+.navbar_button{
+  border-color: white;
+  color: white;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  background: linear-gradient(178deg, #f1592a, #892A01);
+  box-shadow: 0 1px 16px 0px rgba(0,0,0,0.25);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+}
+
+
+.carousel_wrapper{
+  padding-top: 70px;
+  background-color: #101010;
+  
+}
+.carousel_arrow_img{
+  height: 40px;
+  width: 40px;
+  margin-bottom: 50px;
+}
+.carousel_button{
+  border: 0;
+  font-weight: 900;
+  font-size: 30px;
+  color: white;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px 12px;
+  text-align: center;
+  background: linear-gradient(178deg, #f1592a, #892A01);
+  -webkit-box-shadow: 15px 15px 70px 9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 15px 15px 70px 9px rgba(0,0,0,0.75);
+  box-shadow: 15px 15px 70px 9px rgba(0,0,0,0.75);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.25);
+}
+.carousel_button:active{
+  background: linear-gradient(2deg, #f1592a, #892A01)!important;
+}
+
+
+/*--------------------
+--BOOTSTRAP OVERRIDE--
+--------------------*/
+
+nav button{
+  margin-bottom: 1px!important;
+  margin-top: 1px!important;
+}
+nav input{
+  margin-bottom: 1px!important;
+  margin-top: 1px!important;
+}
+
+.navbar-toggler{
+  background: transparent;
+  background-color: #26252c;
+}
+
+.row{
+  background-color: transparent;
+}
+
+.navbar{
+  background-color: #333;
+  color: white;
+  padding-top: 2px!important;
+  padding-bottom: 2px!important;
+}
+
+.navbar a{
+  color: white;
+}
+
+.show{
+  padding-bottom: 5px;
+}
+.carousel {
+  display: block;
+  position: relative;
+  padding-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.carousel .item{
+  margin-top: 70px;
+  max-width: 1200px;
+}
+    
+.carousel-inner img {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+
+}

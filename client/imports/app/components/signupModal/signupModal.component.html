@@ -1,0 +1,90 @@
+
+<div class="registration-modal" id="registration-modal">
+<modal #modalComp>
+
+  <div class="app-modal-header">
+    <h2>Signup Form</h2>
+
+  </div>
+  <div id="signup-modal" class="app-modal-body singup-modal">
+    
+    <form>
+      <label><p>User Name</p></label>
+      <div style="color: red;">{{userNameMsg}}</div>
+        <input 
+          name="userName"
+          class="modal-inputs"
+          id="getUsername" 
+          type="text" 
+          placeholder="Enter Username"
+          [(ngModel)]="credentials.username"
+          required
+          minlength="4"
+        >
+      <label><p>Email</p></label>
+      <div style="color: red;">{{emailMsg}}</div>
+        <input 
+          name="userEmail"
+          class="modal-inputs"
+          id="getUserEmail" 
+          type="text" 
+          placeholder="Enter Email"
+          [(ngModel)]="credentials.email"
+          required
+          minlength="5"
+        >
+      <label><p>Password</p></label>
+      <div style="color: red;">{{passwordMsg}}</div>
+        <input 
+          name="userPassword"
+          class="modal-inputs"
+          id="getPassword" 
+          type="password" 
+          placeholder="Enter Password"
+          [(ngModel)]="credentials.password"
+          required
+          minlength="5"
+        >
+      <label><p>Repeat Password</p></label>
+      <div style="color: red;">{{passwordMatchMsg}}</div>
+        <input 
+          name="userPassConfirm"
+          class="modal-inputs"
+          id="passConfirm" 
+          type="password" 
+          placeholder="Repeat Password"
+          [(ngModel)]="userPassConfirm"
+          required
+          minlength="5"
+        >
+      </form>
+  
+
+
+
+
+  </div><!--end modal body-->
+  <div class="app-modal-footer text-left">
+    <ul [hidden]="!errors || errors.length == 0">
+      <li *ngFor="let error of errors">
+      <h4 style="color: red;">{{ error }}</h4>
+      </li>
+    </ul>
+    <h4 style="color: red;">{{ message }}</h4>
+    
+    <form>
+      <input id="modal-chkbox" type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <div class="clearfix modal-buttons">
+      <button type="button"  class="cancelbtn" (click)="signupModal.hide()">Cancel</button>
+      <button type="button" class="signupbtn" (click)="signup()">Sign Up</button>
+      </div>
+    </form>
+  </div>
+
+</modal>
+</div>
+
+
+
+

@@ -1,0 +1,102 @@
+<div class="admin-modal">
+<modal #modalComp>
+
+<div class="app-modal-header">
+	<h1>Admin Panel</h1>
+</div>
+
+<div class="app-modal-body">
+	<span *ngIf="isAdmin"> 
+		
+			<form>
+			<label><p>Search User</p></label>
+	        <input 
+	          name="searchUser"
+	          class="modal-inputs"
+	          id="getUserEmail" 
+	          type="text"
+	          placeholder="Enter User Name..."
+	          [(ngModel)]="searchString"
+	          #searchUserRef="ngModel"
+	          minlength="3"
+	        ></form>
+	        <button type="submit" class="btn active" role="button" (click)="findUser()">Search</button>
+	        <span *ngIf="userInQuestion">
+	        	<br><br>
+		        <p>Username: {{userInQuestion.username}}</p>
+		        <span *ngFor="let x of userInQuestion.emails">
+					<p>Email: {{x.address}}</p>
+				</span>
+				<p>ID: {{userInQuestion._id}}</p>
+				<p>Pizza Submits ({{userInQuestion.pizzaSubs.length}}) :</p>
+				<div class="submit_container">
+				<div  *ngFor="let item of userInQuestion.pizzaSubs; index as i">
+					<ul>
+						<li>
+						<p><a href="#" (click)="viewPizza(userInQuestion.pizzaSubs[i])">{{item}}</a></p>
+						</li>
+					</ul>
+				</div>
+				</div>
+				<p>Reviews: {{userInQuestion.revSubs.length}}</p>
+				<p>Upvotes: {{userInQuestion.upVotes.length}}</p>
+				<p>Downvotes: {{userInQuestion.downVotes.length}}</p>
+				<p>LastLogin: {{userInQuestion.lastLogin}}</p>
+
+				<button type="button" class="btn active" role="button" (click)="deleteUser(userInQuestion.username)">Delete User</button>
+				<button type="button" class="btn active" role="button" (click)="makeAdmin(userInQuestion.username)">Set Admin</button>
+				<br>
+			</span>
+
+		<hr>
+	    <p>Other Users:</p>
+	    <div class="users_container">
+	    <div *ngFor="let iterate of userNames">
+	    <ul>
+		<li>
+			<button style="border: 1px; margin: 0px; font-size: 10px; padding: 2px;" type="button" class="btn active" role="button" (click)="findUser(iterate.username)">Show Details</button>
+			{{iterate.username}}
+		</li>
+		</ul>
+		</div>
+		</div>
+
+		<hr>
+		New Pizzas to Review:<br>
+		<span *ngIf="newPizzas">
+		<div class="toReview_container">
+		<div id="pizza_review_list" *ngFor="let tempList of newPizzas; index as b">
+				<p>{{b + 1}}:   <a href="#pizza_link" (click)="viewPizza(newPizzas[b]._id)">{{tempList?._id}}</a>: <a href="#" (click)="findUser(newPizzas[b].submittedBy)">{{tempList?.submittedBy}}</a></p>
+		</div>
+		</div>
+		</span>
+
+		<hr>
+		<h3>Server Data:</h3><br>
+
+		<span *ngFor="let xList of serverObject.values">
+			<div style="display:inline-block;">
+			subDate: {{xList.subDate}}
+			<p>newPizzaSubs: {{xList.newPizzaSubs}}</p>
+			<p>newUsers: {{xList.newUsers}}</p>
+			<p>revPosted: {{xList.revPosted}}</p>
+			<p>shouts: {{xList.shouts.length}}</p>
+			<p>delUsers: {{xList.delUsers}}</p>
+			<p>allupvotes: {{xList.allupvotes}}</p>
+			<p>alldownvotes: {{xList.alldownvotes}}</p>
+			</div>
+		</span>
+	</span>
+</div>
+
+
+
+<div class="app-modal-footer">
+	<button type="button" class="cancelbtn active" role="button" (click)="modalComp.hide()">Exit</button>
+	<p>{{errors}}{{message}}</p>
+</div>
+
+
+
+</modal>
+</div>

@@ -1,0 +1,12 @@
+{
+  	"galaxy.meteor.com": {
+    	"env": {
+      		"MONGO_URL": "mongodb://PizzaChronicle:Climbing1730g2020@ds247678.mlab.com:47678/pizzachron"
+    	}
+	},
+    "public": {
+    	"analyticsSettings": {
+	      "Google Analytics" : {"trackingId": "UA-114732090-1"}
+    	}
+  	}
+}

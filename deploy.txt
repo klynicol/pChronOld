@@ -1,0 +1,1 @@
+meteor deploy www.pizzachronicle.com --settings ./settings.json

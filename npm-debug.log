@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'fsevents' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.3
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData fsevents
+8 silly fetchNamedPackageData fsevents
+9 silly mapToRegistry name fsevents
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'fsevents',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'fsevents',
+12 silly mapToRegistry   name: 'fsevents',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/fsevents
+14 verbose request uri https://registry.npmjs.org/fsevents
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 1:11:38 PM
+17 verbose request id 66bb892945531d5b
+18 http request GET https://registry.npmjs.org/fsevents
+19 http 200 https://registry.npmjs.org/fsevents
+20 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+20 verbose headers   server: 'UploadServer',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'last-modified': 'Sun, 11 Feb 2018 2:13:50 GMT',
+20 verbose headers   etag: '"5a7fa6de-e526"',
+20 verbose headers   'x-npm-region': 'US-West',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'content-length': '7304',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Sat, 17 Mar 2018 20:24:06 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '10222',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-sea1051-SEA',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '66',
+20 verbose headers   'x-timer': 'S1521318247.845553,VS0,VE0',
+20 verbose headers   vary: 'Accept-Encoding, Accept' }
+21 silly get cb [ 200,
+21 silly get   { 'content-type': 'application/json; charset=UTF-8',
+21 silly get     server: 'UploadServer',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'last-modified': 'Sun, 11 Feb 2018 2:13:50 GMT',
+21 silly get     etag: '"5a7fa6de-e526"',
+21 silly get     'x-npm-region': 'US-West',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'content-length': '7304',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Sat, 17 Mar 2018 20:24:06 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '10222',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-sea1051-SEA',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '66',
+21 silly get     'x-timer': 'S1521318247.845553,VS0,VE0',
+21 silly get     vary: 'Accept-Encoding, Accept' } ]
+22 verbose get saving fsevents to C:\Users\Klynicol\AppData\Roaming\npm-cache\registry.npmjs.org\fsevents\.cache.json
+23 verbose correctMkdir C:\Users\Klynicol\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly rollbackFailedOptional Starting
+37 silly rollbackFailedOptional Finishing
+38 silly runTopLevelLifecycles Finishing
+39 silly install printInstalled
+40 verbose stack Error: Unsupported platform for fsevents@1.1.3: wanted {"name":"fsevents","version":"1.1.3","description":"Native Access to Mac OS-X FSEvents","main":"fsevents.js","dependencies":{"nan":"^2.3.0","node-pre-gyp":"^0.6.39"},"os":["darwin"],"engines":{"node":">=0.8.0"},"scripts":{"install":"node install","prepublish":"if [ $(npm -v | head -c 1) -lt 3 ]; then exit 1; fi && npm dedupe","test":"tap ./test","node-pre-gyp":"node-pre-gyp"},"binary":{"module_name":"fse","module_path":"./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/","remote_path":"./v{version}/","package_name":"{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz","host":"https://fsevents-binaries.s3-us-west-2.amazonaws.com"},"repository":{"type":"git","url":"git+https://github.com/strongloop/fsevents.git"},"keywords":["fsevents","mac"],"author":{"name":"Philipp Dunkel","email":"pip@pipobscure.com"},"license":"MIT","bugs":{"url":"https://github.com/strongloop/fsevents/issues"},"homepage":"https://github.com/strongloop/fsevents","devDependencies":{"tap":"~0.4.8"},"gitHead":"771928af74aee89801875d1158eb568562f30f16","bundleDependencies":["node-pre-gyp"],"_id":"fsevents@1.1.3","_npmVersion":"5.0.1","_nodeVersion":"6.10.2","_npmUser":{"name":"es128","email":"elan.shanker+npm@gmail.com"},"dist":{"integrity":"sha512-WIr7iDkdmdbxu/Gh6eKEZJL6KPE74/5MEsf2whTOFNxbIoIixogroLdKYqB6FDav4Wavh/lZdzzd3b2KxIXC5Q==","shasum":"11f82318f5fe7bb2cd22965a108e9306208216d8","tarball":"https://registry.npmjs.org/fsevents/-/fsevents-1.1.3.tgz"},"maintainers":[{"name":"es128","email":"elan.shanker+npm@gmail.com"},{"name":"bnoordhuis","email":"info@bnoordhuis.nl"},{"name":"pipobscure","email":"pip@pipobscure.com"},{"name":"strongloop","email":"strngops@us.ibm.com"},{"name":"bajtos","email":"mbajtoss@gmail.com"}],"_npmOperationalInternal":{"host":"s3://npm-registry-packages","tmp":"tmp/fsevents-1.1.3.tgz_1510352601952_0.36498259752988815"},"directories":{},"_from":"fsevents","_resolved":"https://registry.npmjs.org/fsevents/-/fsevents-1.1.3.tgz","_shasum":"11f82318f5fe7bb2cd22965a108e9306208216d8","_requested":{"raw":"fsevents","scope":null,"escapedName":"fsevents","name":"fsevents","rawSpec":"","spec":"latest","type":"tag"},"_spec":"fsevents","_where":"c:\\Users\\Klynicol\\Desktop\\024-PSpec","_args":[[{"raw":"fsevents","scope":null,"escapedName":"fsevents","name":"fsevents","rawSpec":"","spec":"latest","type":"tag"},"c:\\Users\\Klynicol\\Desktop\\024-PSpec"]],"readme":"ERROR: No README data found!"} (current: {"os":"win32","cpu":"x64"})
+40 verbose stack     at checkPlatform (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:45:14)
+40 verbose stack     at thenWarnEngineIssues (C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:41:5)
+40 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+40 verbose stack     at checkEngine (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:24:10)
+40 verbose stack     at module.exports.isInstallable (C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:38:3)
+40 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+40 verbose stack     at LOOP (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+40 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+40 verbose stack     at checkSelf (C:\Program Files\nodejs\node_modules\npm\lib\install\validate-args.js:46:72)
+40 verbose stack     at Array.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+41 verbose pkgid fsevents@1.1.3
+42 verbose cwd c:\Users\Klynicol\Desktop\024-PSpec
+43 error Windows_NT 6.3.9600
+44 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "fsevents"
+45 error node v6.10.3
+46 error npm  v3.10.10
+47 error code EBADPLATFORM
+48 error notsup Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+49 error notsup Valid OS:    darwin
+49 error notsup Valid Arch:  any
+49 error notsup Actual OS:   win32
+49 error notsup Actual Arch: x64
+50 verbose exit [ 1, true ]

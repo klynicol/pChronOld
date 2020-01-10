@@ -1,0 +1,17 @@
+<modal #modalComp>
+	<div class="app-modal-header">
+		<h2>{{modalTitle}}</h2>
+	</div>
+	<div class="app-modal-body">
+		<div class="body_wrapper">
+              <div *ngFor="let item of results | async">
+                <ul>
+                  <li><p><img class="brand_img" src="{{item.brandUrl}}">&nbsp;<a href="#pizza_link" (click)="viewPizza(item._id)">{{item.brand}} | {{getType(item.type)}} / {{getStyle(item.style)}} | PS:{{item.votes}}</a></p></li>
+                </ul>
+              </div>
+      	</div>
+	</div>
+	<div class="app-modal-footer">
+
+	</div>
+</modal>
